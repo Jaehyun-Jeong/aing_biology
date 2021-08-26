@@ -19,7 +19,7 @@ a {
 #gnb {
   position: relative;
   z-index: 10;
-  padding: 10px;
+  padding: 10px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,7 +35,7 @@ a {
 }
 
 #gnb .logo {
-  padding: 11px;
+  padding: 11px 0px;
 }
 
 .logo a {
@@ -44,7 +44,7 @@ a {
 
 .logo a .logo__image {
   position: relative;
-  background-image: url("../images/logo_icon.png");
+  background-image: url("../assets/images/logo_icon.png");
   width: 48px;
   height: 48px;
 }
@@ -74,12 +74,12 @@ a {
 .nav__item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 8px 23px;
 }
 
 .nav__item a {
   position: relative;
+  top: 24%;
 }
 
 .nav__item .arrow {
@@ -110,11 +110,11 @@ a {
   font-weight: normal;
   cursor: pointer;
   color: #ce4344;
-  box-shadow: inset 0px 0px black;
+  box-shadow: inset 0px 0px #ce4344;
   transition: box-shadow 0.25s, color 0.25s;
 }
 
 .buy #buy__btn:hover {
-  box-shadow: inset 0px -55px black;
+  box-shadow: inset 0px -55px #ce4344;
   color: white;
 }
