@@ -19,27 +19,34 @@ class Home extends React.Component {
             <span className="loader__text">Loading...</span>
           </div>
         ) : (
-          <div id="main__desc">
-            <div id='title'>
-              <div id="title__sub">SMART WATCH</div>
-              <div id="title__main">This will change your life forever!</div>
-              <div id="title__desc">A smartwatch is a portable device that's designed to be worn on a wrist. Like smartphones, they use touchscreens.</div>
+          <div id="main">
+            <div id="main__desc">
+              <div id='title'>
+                <div id="title__sub">SMART WATCH</div>
+                <div id="title__main">This will change your life forever!</div>
+                <div id="title__desc">A smartwatch is a portable device that's designed to be worn on a wrist. Like smartphones, they use touchscreens.</div>
+              </div>
+              <div className="checkbox">
+                <label className="checkbox_container"> 
+                  <input type="checkbox" className="circle"></input>
+                  A smartwatch is a portable
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+              <div className="checkbox">
+                <label className="checkbox_container">
+                  <input type="checkbox" className="circle"></input>
+                  A smartwatch is a portable
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+              <span id="dollar">$ 250</span>
             </div>
-            <div className="checkbox">
-              <label className="checkbox_container"> 
-                <input type="checkbox" className="circle"></input>
-                A smartwatch is a portable
-                <span className="checkmark"></span>
-              </label>
+            <div id="main__design">
+              <div id="background_01"></div>
+              <div id="background_02"></div>
+              <div id="background_03"></div>
             </div>
-            <div className="checkbox">
-              <label className="checkbox_container">
-                <input type="checkbox" className="circle"></input>
-                A smartwatch is a portable
-                <span className="checkmark"></span>
-              </label>
-            </div>
-            <span id="dollar">$ 250</span>
           </div>
         )}
       </section>
