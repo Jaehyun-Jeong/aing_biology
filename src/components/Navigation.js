@@ -32,8 +32,7 @@ function Navigation() {
                 </div>
                 <div className="buy">
                     <Link to="/buynow">
-                        <div className=""></div>
-                        <div id="buy__btn">
+                        <div id="nav__buy__btn">
                             <span>Buy Now</span>
                         </div>
                     </Link>

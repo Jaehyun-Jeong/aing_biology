@@ -103,6 +103,89 @@
     font-weight: bold;
 }
 
+#desc__buttons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#desc__buttons .buy {
+    padding: 35px 0px 0px 0px;
+}
+  
+#desc__buttons .buy #desc__buy__btn {
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+    padding: 15px 45px;
+    background-color: white;
+    font-size: 1.05rem;
+    font-weight: normal;
+    cursor: pointer;
+    color: #ce4344;
+    box-shadow: inset 0px 0px #ce4344;
+    transition: box-shadow 0.25s, color 0.25s;
+}
+
+#desc__buttons .buy #desc__buy__btn:hover {
+    box-shadow: inset 0px -55px #ce4344;
+    color: white;
+}
+
+#desc__buttons .watch {
+    padding: 35px 0px 0px 0px;
+}
+
+#desc__buttons .watch #desc__watch__btn {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+    border-radius: 5px;
+    margin: 0px 10px;
+    padding: 15px 30px;
+    background-color: white;
+    font-size: 1.05rem;
+    font-weight: 640;
+    cursor: pointer;
+    color: black;
+    box-shadow: inset 0px 0px #ce4344;
+    transition: box-shadow 0.25s, color 0.25s;
+}
+
+#desc__buttons .watch #desc__watch__btn:hover {
+    box-shadow: inset 0px -55px #ce4344;
+    color: white;
+}
+
+#desc__watch__btn .watchmark {
+    position: absolute;
+    margin: 0px 0px 0px 10px;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: #ce4344;
+}
+
+#desc__watch__btn .watchmark:after {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    /*
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 8px 14px 8px;
+    border-color: transparent transparent black transparent;
+    */
+}
+
+#desc__watch__btn span {
+    margin: auto auto auto 20px;
+}
+
 /*=============================================================================== */ 
 /*============================== background design ============================== */
 /*=============================================================================== */
@@ -117,8 +200,8 @@
     z-index: -1;
     top: 60%;
     left: 110%;
-    height: 700px;
-    width: 700px;
+    height: 1000px;
+    width: 1000px;
     border-radius: 32%;
     background-color: #5D5FEE;
     transform: rotate(80deg);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 import "./Home.css";
 
@@ -41,6 +42,23 @@ class Home extends React.Component {
                 </label>
               </div>
               <span id="dollar">$ 250</span>
+              <div id="desc__buttons">
+                <div className="buy">
+                    <Link to="/buynow">
+                        <div id="desc__buy__btn">
+                          <span>Buy Now</span>
+                        </div>
+                    </Link>
+                </div>
+                <div className="watch">
+                    <a href="https://www.youtube.com/c/joshstarmer" target="_blank">
+                        <div id="desc__watch__btn">
+                          <span className="watchmark"></span>
+                          <span>Watch Video</span>
+                        </div>
+                    </a>
+                </div>
+              </div>
             </div>
             <div id="main__design">
               <div id="background_01"></div>
