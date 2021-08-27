@@ -140,6 +140,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    align-content: stretch;
     z-index: 0;
     border-radius: 5px;
     margin: 0px 10px;
@@ -149,37 +150,39 @@
     font-weight: 640;
     cursor: pointer;
     color: black;
-    box-shadow: inset 0px 0px #ce4344;
-    transition: box-shadow 0.25s, color 0.25s;
+    transition: text-shadow 0.25s;
 }
 
-#desc__buttons .watch #desc__watch__btn:hover {
-    box-shadow: inset 0px -55px #ce4344;
-    color: white;
+#desc__watch__btn:hover {
+    text-shadow: 0px 0px 1px black;
 }
 
 #desc__watch__btn .watchmark {
     position: absolute;
-    margin: 0px 0px 0px 10px;
+    margin: -2px 0px 0px 10px;
     left: 0;
     height: 26px;
     width: 26px;
     border-radius: 50%;
     background-color: #ce4344;
+    transition: box-shadow 0.25s;
+}
+
+#desc__watch__btn:hover .watchmark {
+    box-shadow: 0px 0px 8px #ce4344;
 }
 
 #desc__watch__btn .watchmark:after {
-    width: 100px;
-    height: 100px;
-    background-color: black;
-    /*
+    content: "";
     position: relative;
+    display: block;
+    margin: 8px auto auto 9px;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0px 8px 14px 8px;
-    border-color: transparent transparent black transparent;
-    */
+    border-width: 0px 5px 9px 5px;
+    border-color: transparent transparent white transparent;
+    transform: rotate(90deg)
 }
 
 #desc__watch__btn span {

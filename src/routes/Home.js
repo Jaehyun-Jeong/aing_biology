@@ -53,7 +53,7 @@ class Home extends React.Component {
                 <div className="watch">
                     <a href="https://www.youtube.com/c/joshstarmer" target="_blank">
                         <div id="desc__watch__btn">
-                          <span className="watchmark"></span>
+                          <div className="watchmark"></div>
                           <span>Watch Video</span>
                         </div>
                     </a>
