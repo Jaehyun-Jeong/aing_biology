@@ -1,229 +1,44 @@
-#container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    max-width: 1400px;
+#home_container {
+  position: relative;
+  height: 100vh;
 }
 
-#main {
-    position: relative;
-    display: flex;
-    flex-direction: row;
+#home_main {
+  z-index: 100;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  max-width: 1400px;
+  width: 150px;
+  height: 100%;
 }
 
-#main__desc {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-width: 700px;
-    margin: 93px 0px 0px 0px;
+#home_main #home_sidebar {
+  position: absolute;
+  display: flex;
+  max-width: 150px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 
-#title {
-    max-width: 500px;
+#home_main #home_sidebar__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+  background-color: greenyellow
 }
 
-#title #title__sub {
-    color: #58936a;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0px 0px 20px 0px;
+#home_sidebar .home_sidebar__item {
+  background-color: mediumspringgreen;
+  margin: 15px 30px;
+  font-size: 1.2rem;
 }
 
-#title #title__main {
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 1.1;
-}
-
-#title #title__desc {
-    color: #99908f;
-    font-size: 0.95rem;
-    font-weight: normal;
-    margin: 40px 0px 40px 0px;
-}
-
-.checkbox .checkbox_container {
-    display: block;
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 20px;
-}
-
-.checkbox .checkbox_container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-.checkbox .checkbox_container input:checked ~ .checkmark {
-    background-color: white;
-}
-
-.checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkbox .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    border: 1.5px solid black;
-    background-color: white;
-}
-
-.checkbox .checkmark:after {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid black;
-    opacity: 0;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-.checkbox .checkbox_container input:checked ~ .checkmark:after {
-    opacity: 1;
-}
-
-#dollar {
-    margin: 5px 0px 0px 0px;
-    font-size: 1.7rem;
-    font-weight: bold;
-}
-
-#desc__buttons {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}
-
-#desc__buttons .buy {
-    padding: 35px 0px 0px 0px;
-}
-  
-#desc__buttons .buy #desc__buy__btn {
-    position: relative;
-    z-index: 2;
-    border-radius: 5px;
-    padding: 15px 45px;
-    background-color: white;
-    font-size: 1.05rem;
-    font-weight: normal;
-    cursor: pointer;
-    color: #ce4344;
-    box-shadow: inset 0px 0px #ce4344;
-    transition: box-shadow 0.25s, color 0.25s;
-}
-
-#desc__buttons .buy #desc__buy__btn:hover {
-    box-shadow: inset 0px -55px #ce4344;
-    color: white;
-}
-
-#desc__buttons .watch {
-    padding: 35px 0px 0px 0px;
-}
-
-#desc__buttons .watch #desc__watch__btn {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-content: stretch;
-    z-index: 0;
-    border-radius: 5px;
-    margin: 0px 10px;
-    padding: 15px 30px;
-    background-color: white;
-    font-size: 1.05rem;
-    font-weight: 640;
-    cursor: pointer;
-    color: black;
-    transition: text-shadow 0.25s;
-}
-
-#desc__watch__btn:hover {
-    text-shadow: 0px 0px 1px black;
-}
-
-#desc__watch__btn .watchmark {
-    position: absolute;
-    margin: -2px 0px 0px 10px;
-    left: 0;
-    height: 26px;
-    width: 26px;
-    border-radius: 50%;
-    background-color: #ce4344;
-    transition: box-shadow 0.25s;
-}
-
-#desc__watch__btn:hover .watchmark {
-    box-shadow: 0px 0px 8px #ce4344;
-}
-
-#desc__watch__btn .watchmark:after {
-    content: "";
-    position: relative;
-    display: block;
-    margin: 8px auto auto 9px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0px 5px 9px 5px;
-    border-color: transparent transparent white transparent;
-    transform: rotate(90deg)
-}
-
-#desc__watch__btn span {
-    margin: auto auto auto 20px;
-}
-
-/*=============================================================================== */ 
-/*============================== background design ============================== */
-/*=============================================================================== */
-
-.main__design {
-    max-width: 700px;
-}
-
-#background_01 {
-    position: absolute;
-    display: block;
-    z-index: -1;
-    top: 60%;
-    left: 110%;
-    height: 1000px;
-    width: 1000px;
-    border-radius: 32%;
-    background-color: #5D5FEE;
-    transform: rotate(80deg);
-}
-
-#background_02 {
-    position: absolute;
-    background-image: ;
-    top: 20%;
-    left: 130%;
-    width: 732px;
-    height: 900px;
-}
-
-#background_03 {
-    position: absolute;
-    background-image: ;
-    top: 20%;
-    left: 70%;
-    width: 732px;
-    height: 900px;
+#home_sidebar .home_sidebar__item a {
+  color: black;
+  text-decoration: none;
 }
