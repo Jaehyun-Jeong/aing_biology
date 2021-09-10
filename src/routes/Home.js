@@ -24,22 +24,22 @@ class Home extends React.Component {
               <div id="home_sidebar">
                 <div id="home_sidebar__container">
                   <Link to="/type_01">
-                    <div id="home_sidebar__type_01" className="home_sidebar__item">
+                    <div className="home_sidebar__item home_sidebar__btn">
                       <span>TYPE 01</span>
                     </div>
                   </Link>
                   <Link to="/type_02">
-                    <div id="home_sidebar__type_02" className="home_sidebar__item">
+                    <div className="home_sidebar__item home_sidebar__btn">
                       <span>TYPE 02</span>
                     </div>
                   </Link>
                   <Link to="/type_03">
-                    <div id="home_sidebar__type_03" className="home_sidebar__item">
+                    <div className="home_sidebar__item home_sidebar__btn">
                       <span>TYPE 03</span>
                     </div>
                   </Link>
                   <Link to="/type_04">
-                    <div id="home_sidebar__type_04" className="home_sidebar__item">
+                    <div className="home_sidebar__item home_sidebar__btn">
                       <span>TYPE 04</span>
                     </div>
                   </Link>

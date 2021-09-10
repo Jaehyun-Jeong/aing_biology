@@ -37,18 +37,18 @@
   color: black;
 }
 
-#home_sidebar #home_sidebar__type_01 {
+#home_sidebar .home_sidebar__btn {
   border: 3px solid black;
-  transition: text-shadow 0.5s, box-shadow 0.5s, border 0.5s;
+  transition: text-shadow 0.35s cubic-bezier(.55,0,.1,1), box-shadow 0.35s cubic-bezier(.55,0,.1,1), border 0.35s cubic-bezier(.55,0,.1,1);
 }
 
-#home_sidebar #home_sidebar__type_01:hover {
-  text-shadow: 0px 8px 6px rgba(0,0,0,0.9);
-  box-shadow: 7px 7px 0px #70757a, -7px -7px 0px #70757a, inset 0px -57px #70757a;
-  border: 3px solid #70757a;
+#home_sidebar .home_sidebar__btn:hover {
+  text-shadow: 3px 7px 10px white;
+  box-shadow: 6px 6px 0px black, -6px -6px 0px black, inset 0px -59px black;
+  border: 3px solid black;
 }
 
-#home_sidebar #home_sidebar__type_01:hover span {
+#home_sidebar .home_sidebar__btn:hover span {
   color: white;
 }
 
@@ -65,5 +65,5 @@
   white-space: nowrap;
   color: black;
   font-weight: 1000;
-  transition: color 0.5s;
+  transition: color 0.35s;
 }
