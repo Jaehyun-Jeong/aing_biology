@@ -19,7 +19,8 @@
   max-width: 150px;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: white;
+  box-shadow: inset 0px 0px 0px 2px;
 }
 
 #home_main #home_sidebar__container {
@@ -29,16 +30,40 @@
   width: 100%;
   height: auto;
   border-radius: 10%;
-  background-color: greenyellow
+}
+
+#home_main #home_sidebar__container a {
+  text-decoration: none;
+  color: black;
+}
+
+#home_sidebar #home_sidebar__type_01 {
+  border: 3px solid black;
+  transition: text-shadow 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+#home_sidebar #home_sidebar__type_01:hover {
+  text-shadow: 0px 8px 6px rgba(0,0,0,0.9);
+  box-shadow: 7px 7px 0px #70757a, -7px -7px 0px #70757a, inset 0px -57px #70757a;
+  border: 3px solid #70757a;
+}
+
+#home_sidebar #home_sidebar__type_01:hover span {
+  color: white;
 }
 
 #home_sidebar .home_sidebar__item {
-  background-color: mediumspringgreen;
-  margin: 15px 30px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px;
+  padding: 15px 30px;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
-#home_sidebar .home_sidebar__item a {
+#home_sidebar .home_sidebar__item span {
+  white-space: nowrap;
   color: black;
-  text-decoration: none;
+  font-weight: 1000;
+  transition: color 0.5s;
 }
