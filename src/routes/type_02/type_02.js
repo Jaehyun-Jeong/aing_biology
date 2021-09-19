@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Navigation from './type_02_Navigation';
 import "./type_02.css";
 
 class type_02 extends React.Component {
@@ -19,7 +20,12 @@ class type_02 extends React.Component {
               <span className="loader__text">Loading...</span>
             </div>
           ) : (
-            <div id="main"></div>
+            <React.Fragment>
+              <div id="type_02">
+                <Navigation />
+                <div id="type_02_main"></div>
+              </div>
+            </React.Fragment>
           )}
       </section>
     );
