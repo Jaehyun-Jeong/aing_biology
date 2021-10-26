@@ -1,0 +1,24 @@
+#type_02 {
+  display: flex;
+  flex-direction: row;
+}
+
+#type_02_content {
+  display: flex;
+  flex-direction: column;
+}
+
+#type_02_content__title {
+  font-size: 5rem;
+}
+
+#type_02_content__contents ul {
+  display: flex;
+  flex-direction: column;
+  /*list-style-type: none;*/
+}
+
+#type_02_content__contents span {
+  text-decoration: underline;
+  cursor: pointer;
+}

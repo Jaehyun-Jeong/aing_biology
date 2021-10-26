@@ -6,6 +6,8 @@
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(249,250,251,1) 5%, rgba(249,250,251,1) 50%, rgba(249,250,251,1) 95%, rgba(255,255,255,1) 100%);
   font-size: 13px;
   padding: 40px 0px 40px 30px;
+  max-width: 160px;
+  min-width: 160px;
 }
 
 .type_02_list_menu {

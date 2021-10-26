@@ -54,7 +54,7 @@ class type_01 extends React.Component {
                         </Link>
                       </div>
                       <div className="type_01_watch">
-                        <a href="https://www.youtube.com/c/joshstarmer" target="_blank">
+                        <a href="https://www.youtube.com/c/joshstarmer" target="_blank" rel="noreferrer">
                           <div id="type_01_desc__watch__btn">
                             <div className="type_01_watchmark"></div>
                             <span>Watch Video</span>
