@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/aing_biology/static/css/main.3a4dae98.chunk.css",
-    "main.js": "/aing_biology/static/js/main.4fd4efbd.chunk.js",
-    "main.js.map": "/aing_biology/static/js/main.4fd4efbd.chunk.js.map",
+    "main.css": "/aing_biology/static/css/main.3d185bdb.chunk.css",
+    "main.js": "/aing_biology/static/js/main.0982ab83.chunk.js",
+    "main.js.map": "/aing_biology/static/js/main.0982ab83.chunk.js.map",
     "runtime-main.js": "/aing_biology/static/js/runtime-main.f284704e.js",
     "runtime-main.js.map": "/aing_biology/static/js/runtime-main.f284704e.js.map",
-    "static/js/2.704c3231.chunk.js": "/aing_biology/static/js/2.704c3231.chunk.js",
-    "static/js/2.704c3231.chunk.js.map": "/aing_biology/static/js/2.704c3231.chunk.js.map",
+    "static/js/2.97bdf186.chunk.js": "/aing_biology/static/js/2.97bdf186.chunk.js",
+    "static/js/2.97bdf186.chunk.js.map": "/aing_biology/static/js/2.97bdf186.chunk.js.map",
     "index.html": "/aing_biology/index.html",
-    "static/css/main.3a4dae98.chunk.css.map": "/aing_biology/static/css/main.3a4dae98.chunk.css.map",
-    "static/js/2.704c3231.chunk.js.LICENSE.txt": "/aing_biology/static/js/2.704c3231.chunk.js.LICENSE.txt"
+    "static/css/main.3d185bdb.chunk.css.map": "/aing_biology/static/css/main.3d185bdb.chunk.css.map",
+    "static/js/2.97bdf186.chunk.js.LICENSE.txt": "/aing_biology/static/js/2.97bdf186.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f284704e.js",
-    "static/js/2.704c3231.chunk.js",
-    "static/css/main.3a4dae98.chunk.css",
-    "static/js/main.4fd4efbd.chunk.js"
+    "static/js/2.97bdf186.chunk.js",
+    "static/css/main.3d185bdb.chunk.css",
+    "static/js/main.0982ab83.chunk.js"
   ]
 }
