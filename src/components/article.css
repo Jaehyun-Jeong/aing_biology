@@ -1,5 +1,4 @@
-#type_03_panel {
+#article {
   display: flex;
   flex-direction: column;
-  min-width: 160px;
 }

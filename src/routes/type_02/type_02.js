@@ -24,7 +24,8 @@ class type_02 extends React.Component {
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth'
-      })
+      });
+      this.setState({ doc_id: null });
     }
   }
   componentDidMount() {
