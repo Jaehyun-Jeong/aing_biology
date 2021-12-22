@@ -3,7 +3,7 @@ import Navigation from './type_03_Navigation';
 import Article from '../../components/article';
 import "./type_03.css";
 import { db_service } from "../../fbase";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, query, where, select, getDocs} from "firebase/firestore";
 
 class type_03 extends React.Component {
   constructor(props) {
@@ -11,12 +11,13 @@ class type_03 extends React.Component {
     this.state = {
       is_loading: true,
       content: "",
-      articles: []
+      articles: [],
+      open_article: {"id": "", "title": "", "content": ""}
     };
   }
-  fetch_contents = async () => {
-    const querySnapshot = await getDocs(collection(db_service, "articles"));
-    querySnapshot.forEach((doc) => {
+  fetch_articles = async () => {
+    const query_snapshot = await getDocs(collection(db_service, "articles"));
+    query_snapshot.forEach((doc) => {
       const article_obj = {
         ...doc.data(),
         id: doc.id
@@ -25,28 +26,19 @@ class type_03 extends React.Component {
     });
     this.setState({ is_loading: false });
   }
-  on_change = (e) => {
-    const {
-      target: { value },
-    } = e;
-    this.setState({ content: value });
+  fetch_article = async (id) => {
+    const query_state = query(collection(db_service, "articles"), where("id", "==", id));
+    const query_snapshot = await getDocs(query_state);
+    query_snapshot.forEach((doc) => {
+      const article_obj = {
+        ...doc.data(),
+        id: doc.id
+      };
+      this.setState({ open_article: article_obj });
+    });
   }
-  on_submit = (e) => {
-    e.preventDefault();
-    const content = this.state.content;
-    try {
-      const doc_ref = addDoc(collection(db_service, "articles"), {
-        content: content,
-        create_at: Date.now()
-      });
-      console.log("Document written with ID: ", doc_ref.id);
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
-    this.setState({ content: "" });
-  };
   componentDidMount() {
-    this.fetch_contents();
+    this.fetch_articles();
   }
   render() {
     const { is_loading } = this.state;
@@ -60,24 +52,15 @@ class type_03 extends React.Component {
           ) : (
             < React.Fragment >
               <div id="type_03">
-                <Navigation />
+                <Navigation articles={this.state.articles}/>
                 <div id="type_03_main">
-                  <form onSubmit={this.on_submit}>
-                    <input value={this.state.content} onChange={this.on_change} type="text" placeholder="input something" maxLength={120} />
-                    <input type="submit" value="submit" />
-                  </form>
                   <div id="type_03__articles">
-                    {this.state.articles.map(article => (
-                      <Article
-                        id={article.id}
-                        title={article.title}
-                        content={article.content}
-                      />
-                    ))}
+                    <Article
+                      id={this.state.open_article.id}
+                      title={this.state.open_article.title}
+                      content={this.state.open_article.content}
+                    />
                   </div>
-                </div>
-                <div onClick={this.fetch_contents}>
-                  <h1>contents</h1>
                 </div>
               </div>
             </React.Fragment>

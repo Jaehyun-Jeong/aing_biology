@@ -5,17 +5,17 @@ import './article.css';
 
 function article({ id, title, content }) {
   return (
-    <Link to={{
-      pathname: '/',
-      state: {
-
-      }
-    }}>
-      <div className="article">
+    <div className="article">
+      <Link to={{
+        pathname: "/",
+        state: {
+  
+        }
+      }}>
         <div className="article__title">{title}</div>
-        <div className="article__content">{content}</div>
-      </div>
-    </Link>
+      </Link>
+      <div className="article__content">{content}</div>
+    </div>
   )
 }
 
