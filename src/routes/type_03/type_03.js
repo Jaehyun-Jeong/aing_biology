@@ -3,7 +3,7 @@ import Navigation from './type_03_Navigation';
 import Article from '../../components/article';
 import "./type_03.css";
 import { db_service } from "../../fbase";
-import { collection, query, where, select, getDocs} from "firebase/firestore";
+import { collection, query,  getDocs} from "firebase/firestore";
 
 class type_03 extends React.Component {
   constructor(props) {
@@ -14,6 +14,7 @@ class type_03 extends React.Component {
       articles: [],
       open_article: {"id": "", "title": "", "content": ""}
     };
+    this.fetch_body = this.fetch_body.bind(this);
   }
   fetch_articles = async () => {
     const query_snapshot = await getDocs(collection(db_service, "articles"));
@@ -26,8 +27,8 @@ class type_03 extends React.Component {
     });
     this.setState({ is_loading: false });
   }
-  fetch_article = async (id) => {
-    const query_state = query(collection(db_service, "articles"), where("id", "==", id));
+  fetch_body = async (id) => {
+    const query_state = query(collection(db_service, "articles/" + id + "/body"));
     const query_snapshot = await getDocs(query_state);
     query_snapshot.forEach((doc) => {
       const article_obj = {
@@ -52,11 +53,10 @@ class type_03 extends React.Component {
           ) : (
             < React.Fragment >
               <div id="type_03">
-                <Navigation articles={this.state.articles}/>
+                <Navigation articles={this.state.articles} fetch_function={this.fetch_body}/>
                 <div id="type_03_main">
                   <div id="type_03__articles">
                     <Article
-                      id={this.state.open_article.id}
                       title={this.state.open_article.title}
                       content={this.state.open_article.content}
                     />

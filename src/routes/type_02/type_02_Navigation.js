@@ -5,7 +5,7 @@ import './type_02_Navigation.css';
 function Navigation() {
   return (
     <div id="type_02_panel">
-      <nav class="type_02_panel__nav">
+      <nav className="type_02_panel__nav">
         <h3>
           <span>둘러보기</span>
         </h3>
@@ -39,7 +39,7 @@ function Navigation() {
           </ul>
         </div>
       </nav>
-      <nav class="type_02_panel__nav">
+      <nav className="type_02_panel__nav">
         <h3>
           <span>사용자 모임</span>
         </h3>
@@ -63,7 +63,7 @@ function Navigation() {
           </ul>
         </div>
       </nav>
-      <nav class="type_02_panel__nav">
+      <nav className="type_02_panel__nav">
         <h3>
           <span>편집 안내</span>
         </h3>

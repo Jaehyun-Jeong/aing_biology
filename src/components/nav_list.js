@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './nav_list.css';
 
-function nav_list({ id, title }) {
+function nav_list({ id, title, fetch_function}) {
   return (
-    <li key={id}>
-        <Link to={"/"+ id}>
+    <li className="nav__list">
+        <div  onClick={() => fetch_function(id)}>
             <span>{title}</span>
-        </Link>
+        </div>
     </li>
   )
 }
