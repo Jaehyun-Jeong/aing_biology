@@ -5,7 +5,7 @@ import './nav_list.css';
 function nav_list({ id, title, fetch_function}) {
   return (
     <li className="nav__list">
-        <div  onClick={() => fetch_function(id)}>
+        <div  onClick={() => fetch_function(id, title)}>
             <span>{title}</span>
         </div>
     </li>

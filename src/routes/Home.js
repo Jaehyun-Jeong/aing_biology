@@ -12,7 +12,7 @@ class Home extends React.Component {
       is_loading: true,
       content: "",
       articles: [],
-      open_article: {"id": "", "title": "", "content": ""}
+      open_article: {id: "", title: "", content: ""}
     };
     this.fetch_body = this.fetch_body.bind(this);
   }
@@ -21,22 +21,24 @@ class Home extends React.Component {
     query_snapshot.forEach((doc) => {
       const article_obj = {
         ...doc.data(),
-        id: doc.id
+        "id": doc.id
       };
       this.setState((prev) => ({ articles: [article_obj, ...prev.articles] }));
     });
     this.setState({ is_loading: false });
   }
-  fetch_body = async (id) => {
-    const query_state = query(collection(db_service, "articles/" + id + "/body"));
-    const query_snapshot = await getDocs(query_state);
-    query_snapshot.forEach((doc) => {
+  fetch_body = async (id, title) => {
+    const body_query_state = query(collection(db_service, "articles/" + id + "/body"));
+    const body_query_snapshot = await getDocs(body_query_state);
+    body_query_snapshot.forEach((doc) => {
       const article_obj = {
         ...doc.data(),
+        title: title,
         id: doc.id
       };
-      this.setState({ open_article: article_obj });
+      this.setState(({ open_article: article_obj }));
     });
+    this.setState({ is_loading: false });
   }
   componentDidMount() {
     this.fetch_articles();
