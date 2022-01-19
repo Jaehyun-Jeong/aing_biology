@@ -1,3 +1,19 @@
-.nav__list {
+.nav_list {
     cursor: pointer;
+    width: 140px;
+    padding: 3px 10px;
+    margin: 3px 10px;
+    list-style-position:inside;
+    border-radius: 3px;
+}
+
+.nav_list:hover {
+    background-color: #636363;
+}
+
+.nav_list__title{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
 }

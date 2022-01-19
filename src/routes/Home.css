@@ -1,4 +1,13 @@
 #Home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1320px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+#Home_main{
   display: flex;
   flex-direction: row;
 }

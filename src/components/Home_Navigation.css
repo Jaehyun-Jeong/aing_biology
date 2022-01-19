@@ -1,0 +1,13 @@
+#Home_panel {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  min-width: 180px;
+  padding: 0px;
+  margin: 0;
+}
+
+.Home_list__menu {
+  list-style-type: none;
+  padding: 0;
+}

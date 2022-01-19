@@ -1,6 +1,7 @@
 import React from "react";
-import Navigation from './Home_Navigation';
-import Article from '../components/article';
+import Navigation from "../components/Home_Navigation";
+import Article from "../components/article";
+import Header from "../components/header";
 import "./Home.css";
 import { db_service } from "../fbase";
 import { collection, query,  getDocs} from "firebase/firestore";
@@ -55,9 +56,12 @@ class Home extends React.Component {
           ) : (
             < React.Fragment >
               <div id="Home">
-                <Navigation articles={this.state.articles} fetch_function={this.fetch_body}/>
+                <div id="Home_header">
+                  <Header/>
+                </div>
                 <div id="Home_main">
-                  <div id="Home__articles">
+                  <Navigation articles={this.state.articles} fetch_function={this.fetch_body}/>
+                  <div id="Home_main__articles">
                     <Article
                       title={this.state.open_article.title}
                       content={this.state.open_article.content}
