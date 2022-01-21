@@ -4,9 +4,9 @@ import './article.css';
 
 function article({ title, content }) {
   return (
-    <div className="article">
-      <div className="article__title">{title}</div>
-      <div className="article__content">{content}</div>
+    <div id="article">
+      <div id="article__title">{title}</div>
+      <div id="article__content">{content}</div>
     </div>
   )
 }

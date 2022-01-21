@@ -1,8 +1,8 @@
 #Home_panel {
   display: flex;
   flex-direction: column;
-  width: 180px;
-  min-width: 180px;
+  width: 20%;
+  min-width: 20%;
   padding: 0px;
   margin: 0;
 }
