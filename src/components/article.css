@@ -5,6 +5,8 @@
 
 #article__title {
   width: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 #article__content {
