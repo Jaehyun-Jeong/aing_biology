@@ -1,6 +1,7 @@
 #article {
   display: flex;
   flex-direction: column;
+  margin: 15px;
 }
 
 #article__title {
@@ -9,6 +10,6 @@
   font-weight: 700;
 }
 
-#article__content {
+#article__body {
   width: 100%;
 }

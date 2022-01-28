@@ -2,44 +2,39 @@ import React from "react";
 import Navigation from "../components/Home_Navigation";
 import Article from "../components/article";
 import Header from "../components/header";
+import Footer from "../components/footer";
 import "./Home.css";
 import { db_service } from "../fbase";
-import { collection, query,  getDocs} from "firebase/firestore";
+import { collection,  getDocs} from "firebase/firestore";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       is_loading: true,
-      content: "",
-      articles: [],
-      open_article: {id: "", title: "", content: ""}
+      categories: [],
+      open_article: {id: "", title: "", body: ""}
     };
     this.fetch_body = this.fetch_body.bind(this);
   }
   fetch_articles = async () => {
-    const query_snapshot = await getDocs(collection(db_service, "articles"));
+    const query_snapshot = await getDocs(collection(db_service, "category"));
     query_snapshot.forEach((doc) => {
-      const article_obj = {
+      const category_obj = {
         ...doc.data(),
         "id": doc.id
       };
-      this.setState((prev) => ({ articles: [article_obj, ...prev.articles] }));
+      this.setState((prev) => ({ categories: [category_obj, ...prev.categories] }));
     });
     this.setState({ is_loading: false });
   }
-  fetch_body = async (id, title) => {
-    const body_query_state = query(collection(db_service, "articles/" + id + "/body"));
-    const body_query_snapshot = await getDocs(body_query_state);
-    body_query_snapshot.forEach((doc) => {
-      const article_obj = {
-        ...doc.data(),
-        title: title,
-        id: doc.id
-      };
-      this.setState(({ open_article: article_obj }));
-    });
-    this.setState({ is_loading: false });
+  fetch_body = async (category, index) => {
+    const article_obj = {
+      id: index,
+      title: category.articles[index].title_ko,
+      body: category.articles[index].body
+    };
+    this.setState(({ open_article: article_obj }));
   }
   componentDidMount() {
     this.fetch_articles();
@@ -60,13 +55,16 @@ class Home extends React.Component {
                   <Header/>
                 </div>
                 <div id="Home_main">
-                  <Navigation articles={this.state.articles} fetch_function={this.fetch_body}/>
+                  <Navigation categories={this.state.categories} fetch_function={this.fetch_body}/>
                   <div id="Home_main__articles">
                     <Article
                       title={this.state.open_article.title}
-                      content={this.state.open_article.content}
+                      body={this.state.open_article.body}
                     />
                   </div>
+                </div>
+                <div id="Home_footer">
+                  <Footer/>
                 </div>
               </div>
             </React.Fragment>

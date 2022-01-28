@@ -7,12 +7,20 @@ function Navigation(props) {
       <nav className="Home_panel__nav">
         <div>
           <ul className="Home_list__menu">
-            {props.articles.map(article => (
-              <NavList
-                id={article.id}
-                title={article.title}
-                fetch_function={props.fetch_function}
-              />
+            {props.categories.map(category => (
+              <details className="Home_list__category">
+                <summary>{category.title_ko}</summary>
+                {category.articles.map((article, article_index) => {
+                  return(
+                    <NavList
+                      title={article.title_ko}
+                      category={category}
+                      index={article_index}
+                      fetch_function={props.fetch_function}
+                    />
+                  )
+                })}
+              </details>
             ))}
           </ul>
         </div>

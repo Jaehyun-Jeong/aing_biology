@@ -5,10 +5,12 @@ import "./header.css";
 
 function header() {
   return (
-    <div id="header">
-      <Link to="/">
-        <div id="header__logo"></div>
-      </Link>
+    <div id="header_frame">
+      <div id="header">
+        <Link to="/">
+          <div id="header__logo"></div>
+        </Link>
+      </div>
     </div>
   )
 }

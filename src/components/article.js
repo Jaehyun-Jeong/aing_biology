@@ -7,13 +7,13 @@ import remarkGfm from 'remark-gfm';
 import './article.css';
 import 'katex/dist/katex.min.css';
 
-function article({ title, content }) {
+function article({ title, body }) {
   return (
     <div id="article">
       <div id="article__title">{title}</div>
-      <div id="article__content">
+      <div id="article__body">
       <Markdown
-        children={content.replaceAll("\\n", "\n")}
+        children={body.replaceAll("\\n", "\n")}
         remarkPlugins={[remarkMath, remarkGfm]}
         rehypePlugins={[rehypeKatex]}
       />
@@ -24,7 +24,7 @@ function article({ title, content }) {
 
 article.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired
+  body: PropTypes.string.isRequired
 }
 
 export default article;

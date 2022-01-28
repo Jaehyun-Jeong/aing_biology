@@ -1,13 +1,37 @@
 #Home_panel {
   display: flex;
   flex-direction: column;
-  width: 20%;
-  min-width: 20%;
-  padding: 0px;
-  margin: 0;
+  min-width: 10%;
+  max-width: 15%;
+  padding: 15px;
+  border-right: 1px solid;
 }
 
 .Home_list__menu {
   list-style-type: none;
   padding: 0;
+}
+
+.Home_list__category > summary {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  width: 80%;
+  height: 100%;
+  margin: 3px 10px;
+  padding: 3px 10px;
+  list-style-type: "╋ ";
+  list-style-position:inside;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.Home_list__category[open] > summary {
+  list-style-type: "━ ";
+}
+
+.Home_list__category > summary:hover {
+  background-color: #636363;
 }

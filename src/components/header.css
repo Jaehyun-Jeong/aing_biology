@@ -1,4 +1,13 @@
+#header_frame {
+    width: 100vw;
+    border-bottom: 1px solid;
+}
+
 #header {
+    position: relative;
+    margin: 0 auto;
+    width: 1320px;
+    max-width: 1320px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
