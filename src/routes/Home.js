@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../components/Home_Navigation";
+import ArticleNavigation from "../components/article_navigation";
 import Article from "../components/article";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -56,12 +57,13 @@ class Home extends React.Component {
                 </div>
                 <div id="Home_main">
                   <Navigation categories={this.state.categories} fetch_function={this.fetch_body}/>
-                  <div id="Home_main__articles">
+                  <div id="Home_main__article">
                     <Article
                       title={this.state.open_article.title}
                       body={this.state.open_article.body}
                     />
                   </div>
+                  <ArticleNavigation/>
                 </div>
                 <div id="Home_footer">
                   <Footer/>

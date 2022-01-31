@@ -4,7 +4,6 @@ import './footer.css';
 function footer() {
   return (
     <div id="footer">
-
     </div>
   )
 }

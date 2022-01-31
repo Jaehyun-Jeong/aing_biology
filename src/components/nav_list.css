@@ -1,10 +1,9 @@
 .nav_list {
-    cursor: pointer;
     width: 80%;
     padding: 3px 10px;
     margin: 3px 10px;
-    list-style-position:inside;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .nav_list:hover {
@@ -15,5 +14,7 @@
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;   
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    text-indent: 2rem;
 }

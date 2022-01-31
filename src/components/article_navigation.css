@@ -1,0 +1,8 @@
+#article_navigation {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 15px;
+  border-left: 1px solid;
+  border-color: #767676;
+}

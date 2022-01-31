@@ -1,10 +1,10 @@
 #Home_panel {
   display: flex;
   flex-direction: column;
-  min-width: 10%;
-  max-width: 15%;
+  width: 30%;
   padding: 15px;
   border-right: 1px solid;
+  border-color: #767676;
 }
 
 .Home_list__menu {
@@ -22,14 +22,26 @@
   height: 100%;
   margin: 3px 10px;
   padding: 3px 10px;
-  list-style-type: "╋ ";
   list-style-position:inside;
   border-radius: 3px;
   font-weight: 700;
+  font-size: 0.8rem;
 }
 
-.Home_list__category[open] > summary {
-  list-style-type: "━ ";
+.Home_list__category > summary #Home_list__arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 0 0;
+  border-color: transparent transparent transparent transparent;
+}
+
+.Home_list__category[open] > summary #Home_list__arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 0 0;
+  border-color: transparent transparent transparent transparent;
 }
 
 .Home_list__category > summary:hover {

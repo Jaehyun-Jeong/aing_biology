@@ -1,6 +1,7 @@
 #header_frame {
     width: 100vw;
     border-bottom: 1px solid;
+    border-color: #767676;
 }
 
 #header {

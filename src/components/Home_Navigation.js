@@ -9,7 +9,7 @@ function Navigation(props) {
           <ul className="Home_list__menu">
             {props.categories.map(category => (
               <details className="Home_list__category">
-                <summary>{category.title_ko}</summary>
+                <summary><span id="Home_list__arrow"/>{category.title_ko}</summary>
                 {category.articles.map((article, article_index) => {
                   return(
                     <NavList
