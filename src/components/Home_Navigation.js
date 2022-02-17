@@ -1,10 +1,13 @@
 import './Home_Navigation.css';
 import NavList from "./nav_list";
+import { useState } from "react";
 
 function Navigation(props) {
+  const [panel_opened, set_panel_opened] = useState(false);
+
   return (
-    <div id="Home_panel">
-      <nav className="Home_panel__nav">
+    <div id={`${panel_opened ? 'Home_panel_checked' : 'Home_panel'}`}>
+      <nav id={`${panel_opened ? 'Home_panel__nav_checked' : 'Home_panel__nav'}`}>
         <div>
           <ul className="Home_list__menu">
             {props.categories.map(category => (
@@ -25,6 +28,10 @@ function Navigation(props) {
           </ul>
         </div>
       </nav>
+      <div 
+        className={"Home_panel__button"}
+        onClick={() => { set_panel_opened(!panel_opened) }}
+      >☰</div>
     </div>
   );
 }

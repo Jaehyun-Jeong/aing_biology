@@ -6,3 +6,14 @@
   border-left: 1px solid;
   border-color: #767676;
 }
+
+/* 모바일 */
+@media screen and (max-width:767px) {
+  #article_navigation {
+    display: flex;
+    flex-direction: column;
+    width: 0%;
+    padding: 0;
+    border: 0px;
+  }
+}

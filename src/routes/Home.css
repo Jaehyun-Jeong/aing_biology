@@ -20,3 +20,7 @@
 #Home_main__article {
   width: 100%;
 }
+
+/* 모바일 */
+@media screen and (max-width:767px) {
+}
