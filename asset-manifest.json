@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/aing_biology/static/css/main.fa134b70.chunk.css",
-    "main.js": "/aing_biology/static/js/main.ec1e72bb.chunk.js",
-    "main.js.map": "/aing_biology/static/js/main.ec1e72bb.chunk.js.map",
+    "main.css": "/aing_biology/static/css/main.35a777d1.chunk.css",
+    "main.js": "/aing_biology/static/js/main.fa2bb402.chunk.js",
+    "main.js.map": "/aing_biology/static/js/main.fa2bb402.chunk.js.map",
     "runtime-main.js": "/aing_biology/static/js/runtime-main.f284704e.js",
     "runtime-main.js.map": "/aing_biology/static/js/runtime-main.f284704e.js.map",
     "static/css/2.87ea98f3.chunk.css": "/aing_biology/static/css/2.87ea98f3.chunk.css",
-    "static/js/2.44a4cbcd.chunk.js": "/aing_biology/static/js/2.44a4cbcd.chunk.js",
-    "static/js/2.44a4cbcd.chunk.js.map": "/aing_biology/static/js/2.44a4cbcd.chunk.js.map",
+    "static/js/2.c656a09a.chunk.js": "/aing_biology/static/js/2.c656a09a.chunk.js",
+    "static/js/2.c656a09a.chunk.js.map": "/aing_biology/static/js/2.c656a09a.chunk.js.map",
     "index.html": "/aing_biology/index.html",
     "static/css/2.87ea98f3.chunk.css.map": "/aing_biology/static/css/2.87ea98f3.chunk.css.map",
-    "static/css/main.fa134b70.chunk.css.map": "/aing_biology/static/css/main.fa134b70.chunk.css.map",
-    "static/js/2.44a4cbcd.chunk.js.LICENSE.txt": "/aing_biology/static/js/2.44a4cbcd.chunk.js.LICENSE.txt",
+    "static/css/main.35a777d1.chunk.css.map": "/aing_biology/static/css/main.35a777d1.chunk.css.map",
+    "static/js/2.c656a09a.chunk.js.LICENSE.txt": "/aing_biology/static/js/2.c656a09a.chunk.js.LICENSE.txt",
     "static/media/katex.min.css": "/aing_biology/static/media/KaTeX_Typewriter-Regular.c5c02d76.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.f284704e.js",
     "static/css/2.87ea98f3.chunk.css",
-    "static/js/2.44a4cbcd.chunk.js",
-    "static/css/main.fa134b70.chunk.css",
-    "static/js/main.ec1e72bb.chunk.js"
+    "static/js/2.c656a09a.chunk.js",
+    "static/css/main.35a777d1.chunk.css",
+    "static/js/main.fa2bb402.chunk.js"
   ]
 }
