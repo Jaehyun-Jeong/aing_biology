@@ -6,7 +6,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import "./Home.css";
 import { db_service } from "../fbase";
-import { collection,  getDocs} from "firebase/firestore";
+import { collection,  getDocs } from "firebase/firestore";
 
 class Home extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Home extends React.Component {
     this.state = {
       is_loading: true,
       categories: [],
-      open_article: {id: "", title: "", body: ""}
+      open_article: {id: "", title: "", created_date: "", body: ""}
     };
     this.fetch_body = this.fetch_body.bind(this);
   }
@@ -30,9 +30,11 @@ class Home extends React.Component {
     this.setState({ is_loading: false });
   }
   fetch_body = async (category, index) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const article_obj = {
       id: index,
       title: category.articles[index].title_ko,
+      created_date: category.articles[index].created_date.toDate().toLocaleDateString(undefined, options),
       body: category.articles[index].body
     };
     this.setState(({ open_article: article_obj }));
@@ -60,6 +62,7 @@ class Home extends React.Component {
                   <div id="Home_main__article">
                     <Article
                       title={this.state.open_article.title}
+                      created_date={this.state.open_article.created_date}
                       body={this.state.open_article.body}
                     />
                   </div>

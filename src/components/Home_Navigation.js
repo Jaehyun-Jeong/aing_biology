@@ -6,8 +6,8 @@ function Navigation(props) {
   const [panel_opened, set_panel_opened] = useState(false);
 
   return (
-    <div id={`${panel_opened ? 'Home_panel_checked' : 'Home_panel'}`}>
-      <nav id={`${panel_opened ? 'Home_panel__nav_checked' : 'Home_panel__nav'}`}>
+    <div id="Home_panel" className={`${panel_opened ? 'Home_panel_checked' : ''}`}>
+      <nav id="Home_panel__nav" className={`${panel_opened ? 'Home_panel__nav_checked' : ''}`}>
         <div>
           <ul className="Home_list__menu">
             {props.categories.map(category => (
@@ -28,10 +28,11 @@ function Navigation(props) {
           </ul>
         </div>
       </nav>
-      <div 
-        className={"Home_panel__button"}
+      <div
+        id="Home_panel__button" 
+        className={`${panel_opened ? "Home_panel__button_checked" : ""}`}
         onClick={() => { set_panel_opened(!panel_opened) }}
-      >☰</div>
+      >{`${panel_opened ? "" : "☰"}`}</div>
     </div>
   );
 }

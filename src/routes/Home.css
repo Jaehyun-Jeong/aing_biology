@@ -11,6 +11,7 @@
 #Home_main{
   width: 100vw;
   max-width: 100vw;
+  top: 250px;
   flex-grow: 1;
   display: flex;
   flex-direction: row;

@@ -12,7 +12,7 @@ function nav_list({ title, category, index, fetch_function}) {
 
 nav_list.propTypes = {
   title: PropTypes.string.isRequired,
-  category: PropTypes.array.isRequired,
+  category: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
 }
 

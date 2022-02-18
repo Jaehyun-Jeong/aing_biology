@@ -1,4 +1,5 @@
 #article_navigation {
+  position: sticky;
   display: flex;
   flex-direction: column;
   width: 30%;
