@@ -56,7 +56,8 @@
   background-color: #636363;
 }
 
-.Home_panel__button {
+
+#Home_panel__button {
   display: none;
 }
 
