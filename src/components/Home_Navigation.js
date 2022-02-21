@@ -1,12 +1,30 @@
 import './Home_Navigation.css';
 import NavList from "./nav_list";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Navigation(props) {
   const [panel_opened, set_panel_opened] = useState(false);
+  
+  useEffect(() => {
+    props.blur_function();
+  }, [panel_opened]);
 
   return (
     <div id="Home_panel" className={`${panel_opened ? 'Home_panel_checked' : ''}`}>
+    <div
+      id="Home_panel__button" 
+      className={`${panel_opened ? "Home_panel__button_checked" : ""}`}
+      onClick={() => { set_panel_opened(!panel_opened) }}
+    >{`${panel_opened ? "X" : "☰"}`}</div>
+    <a
+      className={`${panel_opened ? "Home_panel__email_checked" : "Home_panel__email"}`}
+      href="mailto:wogus0948@naver.com">
+      <div id="Home_panel__email_image"></div>
+    </a>
+    <div
+      className={`${panel_opened ? "Home_panel__about_checked" : "Home_panel__about"}`}>
+      <div id="Home_panel__about_image"></div>
+    </div>
       <nav id="Home_panel__nav" className={`${panel_opened ? 'Home_panel__nav_checked' : ''}`}>
         <div>
           <ul className="Home_list__menu">
@@ -28,11 +46,6 @@ function Navigation(props) {
           </ul>
         </div>
       </nav>
-      <div
-        id="Home_panel__button" 
-        className={`${panel_opened ? "Home_panel__button_checked" : ""}`}
-        onClick={() => { set_panel_opened(!panel_opened) }}
-      >{`${panel_opened ? "" : "☰"}`}</div>
     </div>
   );
 }

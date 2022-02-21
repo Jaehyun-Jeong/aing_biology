@@ -52,7 +52,7 @@
   border-color: transparent transparent transparent transparent;
 }
 
-.Home_list__category > summary:hover {
+.Home_list__category > summary:active {
   background-color: #636363;
 }
 
@@ -64,22 +64,34 @@
 /* 모바일 */
 @media screen and (max-width:767px) {
   #Home_panel {
-    width: 80%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 0;
+    height: 100%;
     margin: 0;
-    background-color: #767676;
-    -webkit-transition: all left 1s linear;
-    -moz-transition: all left 1s linear;
-    -o-transition: all left 1s linear;
-    transition: all left 1s linear;
+    border-right: 0;
+    background-color: #232627;
   }
   
   #Home_panel.Home_panel_checked {
-    width: 80%;
-    background-color: blue;
+    box-shadow: 0 0 8px #ccc;
+    width: 300px;
+    animation: home_panel_animation 0.5s 1;
+  }
+
+  @keyframes home_panel_animation {
+    0% {
+      left: -300px;
+    }
+    100% {
+      left: 0px;
+    }
   }
 
   #Home_panel__nav {
-    display: none;
+    width: 100%;
+    margin: 64px 0px 0px 0px;
   }
 
   .Home_panel__nav_checked {
@@ -91,15 +103,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    cursor: pointer;
     width: 80%;
     height: 100%;
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
-    list-style-position:inside;
+    list-style-position: inside;
     border-radius: 3px;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   #Home_panel__button {
@@ -109,16 +120,89 @@
     width: 64px;
     height: 64px;
     align-items: center;
-    border-radius: 50%;
     justify-content: center;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
   }
 
   .Home_panel__button_checked {
-    display: none;
+    left: 236px;
+    animation: home_panel__button_animation 0.5s 1;
   }
-  
-  .Home_panel__button:active {
-    background-color: #636363;
+
+  @keyframes home_panel__button_animation {
+    0% {
+      left: -64px;
+    }
+    100% {
+      left: 236px;
+    }
+  }
+
+  .Home_panel__email {
+    position: absolute;
+    display: none;
+    left: -300px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .Home_panel__email_checked {
+    position: absolute;
+    display: flex;
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    left: 0px;
+    animation: Home_panel__email_animation 0.5s 1;
+  }
+
+  @keyframes Home_panel__email_animation {
+    0% {
+      left: -300px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
+
+  #Home_panel__email_image {
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/images/email_icon.png");
+  }
+
+  .Home_panel__about {
+    position: absolute;
+    display: none;
+    left: -236px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .Home_panel__about_checked {
+    position: absolute;
+    display: flex;
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    left: 64px;
+    animation: Home_panel__about_animation 0.5s 1;
+  }
+
+  @keyframes Home_panel__about_animation {
+    0% {
+      left: -236px;
+    }
+    100% {
+      left: 64px;
+    }
+  }
+
+  #Home_panel__about_image {
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/images/user_icon.png");
   }
 }

@@ -14,7 +14,8 @@ class Home extends React.Component {
     this.state = {
       is_loading: true,
       categories: [],
-      open_article: {id: "", title: "", created_date: "", body: ""}
+      open_article: {id: "", title: "", created_date: "", body: ""},
+      is_blur: false
     };
     this.fetch_body = this.fetch_body.bind(this);
   }
@@ -39,6 +40,9 @@ class Home extends React.Component {
     };
     this.setState(({ open_article: article_obj }));
   }
+  toggle_blur_body = () => {
+    this.setState((prev) => ({ is_blur: !prev.is_blur }));
+  }
   componentDidMount() {
     this.fetch_articles();
   }
@@ -54,12 +58,14 @@ class Home extends React.Component {
           ) : (
             < React.Fragment >
               <div id="Home">
-                <div id="Home_header">
+                <div id="Home_header" className={`${this.state.is_blur ? "" : "blur"}`}>
                   <Header/>
                 </div>
                 <div id="Home_main">
-                  <Navigation categories={this.state.categories} fetch_function={this.fetch_body}/>
-                  <div id="Home_main__article">
+                  <Navigation categories={this.state.categories} fetch_function={this.fetch_body} blur_function={this.toggle_blur_body}/>
+                  <div id="Home_main__article"
+                    className={`${this.state.is_blur ? "" : "blur"}`}
+                  >
                     <Article
                       title={this.state.open_article.title}
                       created_date={this.state.open_article.created_date}
@@ -68,7 +74,7 @@ class Home extends React.Component {
                   </div>
                   <ArticleNavigation/>
                 </div>
-                <div id="Home_footer">
+                <div id="Home_footer" className={`${this.state.is_blur ? "" : "blur"}`}>
                   <Footer/>
                 </div>
               </div>

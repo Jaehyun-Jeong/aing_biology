@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-.nav_list:hover {
+.nav_list:active {
     background-color: #636363;
 }
 
@@ -19,9 +19,10 @@
     text-indent: 2rem;
 }
 
-@media only screen and (min-device-width: 320px) and (max-divice-width: 480px){
+/* 모바일 */
+@media screen and (max-width:767px) {
     .nav_list {
-        width: 100%;
+        width: 80%;
         padding: 3px 10px;
         margin: 3px 10px;
         border-radius: 3px;

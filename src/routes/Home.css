@@ -24,4 +24,20 @@
 
 /* 모바일 */
 @media screen and (max-width:767px) {
+  .blur {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    animation: blur_animation 0.5s 1;
+  }
+
+  @keyframes blur_animation {
+    0% {
+      filter: blur(0px);
+      -webkit-filter: blur(0px);
+    }
+    100% {
+      filter: blur(4px);
+      -webkit-filter: blur(4px);
+    }
+  }
 }
