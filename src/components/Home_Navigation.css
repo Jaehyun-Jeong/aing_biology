@@ -170,6 +170,7 @@
     width: 20px;
     height: 20px;
     background-image: url("../assets/images/email_icon.png");
+    background-size: contain;
   }
 
   .Home_panel__about {
@@ -204,5 +205,6 @@
     width: 20px;
     height: 20px;
     background-image: url("../assets/images/user_icon.png");
+    background-size: contain;
   }
 }

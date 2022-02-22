@@ -39,6 +39,7 @@
         margin: 0;
         padding: 0;
         align-items: center;
-        background-image: url("../assets/images/logo_mobile.png");
+        background-image: url("../assets/images/logo.png");
+        background-size: contain;
     }
 }
