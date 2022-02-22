@@ -6,6 +6,7 @@
   padding: 15px;
   margin: 30px 0;
   width: 75%;
+  max-width: 75%;
   left: 50%;
   border-radius: 10px;
   transform: translateX(-50%);
@@ -16,7 +17,7 @@
 
 #article__title {
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   border-bottom: 1px solid;
   border-color: #767676;
@@ -29,6 +30,10 @@
 
 #article__body {
   width: 100%;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* 모바일 */
