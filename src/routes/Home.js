@@ -1,8 +1,8 @@
 import React from "react";
 import Navigation from "../components/Home_Navigation";
-import ArticleNavigation from "../components/article_navigation";
 import Article from "../components/article";
 import Header from "../components/header";
+import Title from "../components/title";
 import Footer from "../components/footer";
 import "./Home.css";
 import { db_service } from "../fbase";
@@ -14,7 +14,7 @@ class Home extends React.Component {
     this.state = {
       is_loading: true,
       categories: [],
-      open_article: {id: "", title: "", created_date: "", body: ""},
+      open_article: {id: "", title: "", created_date: "", thumbnail: "", body: ""},
       is_blur: false
     };
     this.fetch_body = this.fetch_body.bind(this);
@@ -36,6 +36,7 @@ class Home extends React.Component {
       id: index,
       title: category.articles[index].title_ko,
       created_date: category.articles[index].created_date.toDate().toLocaleDateString(undefined, options),
+      thumbnail: category.articles[index].thumbnail,
       body: category.articles[index].body
     };
     this.setState(({ open_article: article_obj }));
@@ -61,18 +62,22 @@ class Home extends React.Component {
                 <div id="Home_header" className={`${this.state.is_blur ? "" : "blur"}`}>
                   <Header/>
                 </div>
+                <div id="Home_title"  className={`${this.state.is_blur ? "" : "blur"}`}>
+                  <Title
+                    thumbnail={this.state.open_article.thumbnail}
+                    title={this.state.open_article.title}
+                    created_date={this.state.open_article.created_date}
+                  />
+                </div>
                 <div id="Home_main">
-                  <Navigation categories={this.state.categories} fetch_function={this.fetch_body} blur_function={this.toggle_blur_body}/>
-                  <div id="Home_main__article"
-                    className={`${this.state.is_blur ? "" : "blur"}`}
-                  >
+                  <div 
+                    id="Home_main__article"
+                    className={`${this.state.is_blur ? "" : "blur"}`}>
                     <Article
-                      title={this.state.open_article.title}
-                      created_date={this.state.open_article.created_date}
                       body={this.state.open_article.body}
                     />
                   </div>
-                  <ArticleNavigation/>
+                  <Navigation categories={this.state.categories} fetch_function={this.fetch_body} blur_function={this.toggle_blur_body}/>
                 </div>
                 <div id="Home_footer" className={`${this.state.is_blur ? "" : "blur"}`}>
                   <Footer/>

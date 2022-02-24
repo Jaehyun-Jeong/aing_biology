@@ -12,8 +12,6 @@ import 'katex/dist/katex.min.css';
 function article({ title, created_date, body }) {
   return (
     <div id="article">
-      <div id="article__title">{title}</div>
-      <div id="article__created_date">{created_date}</div>
       <div id="article__body">
       <Markdown
         children={body.replaceAll("\\n", "\n")}

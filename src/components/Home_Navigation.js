@@ -11,20 +11,20 @@ function Navigation(props) {
 
   return (
     <div id="Home_panel" className={`${panel_opened ? 'Home_panel_checked' : ''}`}>
-    <div
-      id="Home_panel__button" 
-      className={`${panel_opened ? "Home_panel__button_checked" : ""}`}
-      onClick={() => { set_panel_opened(!panel_opened) }}
-    >{`${panel_opened ? "X" : "☰"}`}</div>
-    <a
-      className={`${panel_opened ? "Home_panel__email_checked" : "Home_panel__email"}`}
-      href="mailto:wogus0948@naver.com">
-      <div id="Home_panel__email_image"></div>
-    </a>
-    <div
-      className={`${panel_opened ? "Home_panel__about_checked" : "Home_panel__about"}`}>
-      <div id="Home_panel__about_image"></div>
-    </div>
+      <div className='Home_panel__header'>
+        <div
+          className={`${panel_opened ? 'Home_panel__button_checked' : 'Home_panel__button'}`}
+          onClick={() => { set_panel_opened(!panel_opened) }}
+        >{`${panel_opened ? "X" : "☰"}`}</div>
+        <a
+          className="Home_panel__email"
+          href="mailto:wogus0948@naver.com">
+          <div id="Home_panel__email_image"></div>
+        </a>
+        <div className="Home_panel__about">
+          <div id="Home_panel__about_image"></div>
+        </div>
+      </div>
       <nav id="Home_panel__nav" className={`${panel_opened ? 'Home_panel__nav_checked' : ''}`}>
         <div>
           <ul className="Home_list__menu">

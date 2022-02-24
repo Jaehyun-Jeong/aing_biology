@@ -1,0 +1,24 @@
+#title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#title__name {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#title__created_date {
+    padding: 10px 0;
+    font-size: 0.85rem;
+    text-align: right;
+}
